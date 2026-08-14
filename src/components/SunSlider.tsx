@@ -83,7 +83,7 @@ function SunSlider({ onPositionChange }: SunSliderProps) {
     //The vertical track the sun slides along
     <div
       ref={trackRef}
-      className="absolute right-10 top-20 bottom-20 w-2 bg-white/20 rounded-full z-20"
+      className="absolute right-4 sm:right-6 md:right-10 top-24 sm:top-20 bottom-24 sm:bottom-20 w-2 bg-white/20 rounded-full z-20"
     >
       {/* The draggable sun itself */}
       <div
