@@ -1,4 +1,5 @@
-import bg from './assets/MorningBg.png'
+import bg from './assets/dawn2.png'
+import Header from './components/header'
 
 function App() {
 
@@ -6,10 +7,8 @@ function App() {
     <>
       <div className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}>
-          <div>
-            <h1>Yes this works or no....</h1>
-            <p>Lets see!</p>
-          </div>
+        <Header/>
+          
       </div>
     </>
   )
