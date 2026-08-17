@@ -2,7 +2,7 @@ import { useState } from 'react'
 import bg from '../assets/dawn2.png'
 import Header from '../components/Header'
 import SunSlider from '../components/SunSlider'
-import InfoSidebar from '../components/SideBar'
+import BackButton from '../components/BackButton'
 
 function App() {
   const [brightness, setBrightness] = useState(1)
@@ -21,9 +21,9 @@ function App() {
         filter: `brightness(${brightness})`,
       }}
     >
+      <BackButton/>
       <Header/>
       <SunSlider onPositionChange={handleSunMove} />
-      <InfoSidebar/>
     </div>
   )
 }
