@@ -9,7 +9,7 @@ function App() {
 
   //this is for the brightness, changes the min/max output based on the equation below
   const handleSunMove = (percent: number) => {
-    const newBrightness = 0.7 + (percent / 100) * 0.5
+    const newBrightness = 0.8 + (percent / 100) * 0.5
     setBrightness(newBrightness)
   }
 
