@@ -5,6 +5,7 @@ interface SunSliderProps {
 }
 
 function SunSlider({ onPositionChange }: SunSliderProps) {
+  
   //How far up the track the sun is, as a percent (0 = bottom, 100 = top)
   const [sunPosition, setSunPosition] = useState(20)
 
@@ -23,6 +24,7 @@ function SunSlider({ onPositionChange }: SunSliderProps) {
   //Calculates the sun's new position based on pointer Y, but only updates
   //once per animation frame instead of on every single pixel of movement
   const updatePosition = useCallback((clientY: number) => {
+
     //Save the latest pointer position
     pendingPointerY.current = clientY
 
@@ -93,10 +95,13 @@ function SunSlider({ onPositionChange }: SunSliderProps) {
         className="absolute w-8 h-8 rounded-full cursor-grab active:cursor-grabbing shadow-lg"
         style={{
           //Positions the sun vertically based on its current percent
+
           bottom: `${sunPosition}%`,
           left: '50%',
+
           //Centers the sun on the track (instead of its edge lining up with it)
           transform: 'translate(-50%, 50%)',
+
           //Gives the sun a glowing yellow look
           background: 'radial-gradient(circle, #fff7cc, #ffcc33)',
           boxShadow: '0 0 20px 6px rgba(255, 204, 51, 0.8)',
